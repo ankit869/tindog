@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- https://getbootstrap.com/ -->
+    <!-- https://dribbble.com/ -->
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="tindog.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6be2184d84.js" crossorigin="anonymous"></script>
+    <style>
+          .navbar{
+            background-color:rgba(8, 8, 8, 0.7);
+          }
+          #searchbtn:hover{
+            background-color:#ef8172;
+            color: black;
+          }
+          #searchbar{
+            font-size:2rem;
+          }
+          #searchbtn{
+            border:1px solid #ef8172;
+            color:#ef8172;
+            font-size:1.5rem;
+            font-family: "Ubuntu";
+          }
+          .navbar-toggler{
+            transform: scale(1.5);
+            position: relative;
+            right:20px;
+          }
+          .d-flex input{
+            padding:3px;
+            margin:5px;
+          }
+          .d-flex button{
+            padding:5px 10px 5px 10px;
+            margin:5px;
+            font-weight:bold;
+          }
+          #title{
+            background-color:#ef8172;
+            font-size: 1.5rem;;
+          } 
+          .navbar-brand{
+            font-size: 2.5rem;
+          }
+          #icon{
+            font-family:"Ubuntu";
+          }
+          #top_heading{
+            font-family: "Poppins", sans-serif;
+            line-height: 1.5;
+            font-size: 3.5rem;
+            font-weight: bolder;
+            color:black;
+          }
+          #top_container{
+            padding: 0% 10% 0% 10%;
+            margin:0px;
+            align-items: center;
+          }
+          #top_container button{
+            margin:10px ;
+          }
+          #iphone{
+            width: 50%;
+            transform: rotate(25deg);
+            position: relative;
+            top:50px;
+            left:20%;
+          }
+          body {
+            font-family: "Montserrat";
+            text-align: center;
+          }
+          #features{
+            padding: 3% 8% 3% 8%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            position: relative;
+            z-index:1;
+          }
+          .feature-box{
+            padding:3%;
+          }
+          .feature-box p{
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+          }
+          .icon{
+            color:#ef8172;
+            padding:3%;
+          }
+          .icon:hover{
+            color:#e66175;
+          }
+          .feature-title{
+            font-weight: bold;
+            font-family: "Poppins", sans-serif;
+            color:black;
+            font-size:2.2rem;
+          }
+          .carousel{
+             background-color: #ef8172;
+             justify-content: center;
+          }
+          .carousel-item{
+            padding:2% 20% 4% 20%;
+            
+          }
+          .testimonial-text{
+            font-family: "Ubuntu";
+            font-weight:bold;
+            color:black;
+          }
+          .testimonial-image{
+            border-radius: 50%;
+            width: 20%;
+            padding: 10px;
+          }
+          .primary-h1{
+            font-size: 3.5rem;
+            font-weight: bolder;
+            color: black;
+            font-family: "Ubuntu"
+          }
+          .clients_icon{
+            display: inline-block;
+            padding:3% 4.5%;
+          }
+          #pricing{
+            padding: 0px 100px 0px 100px;
+          }
+          #price{
+            background-color: #ef8172;
+          }
+          .pricing-header p{
+            color:black;
+          }
+          .price-box{
+            padding: 3% 3% 0% 3%;
+            margin: -1% -2% 4% 1%;
+            border-radius: 10%;
+            font-family: "Poppins", sans-serif;
+          }
+          #tindog-icon{
+            width:17%;
+          }
+          .main-download{
+            margin:4% 2% 4% 4%;
+            font-size: 2rem;
+          }
+          #footer{
+            background-color: #ef8172;
+          }
+          .bottom{
+            color:black;
+            padding:1%;
+          }
+          .social-icon{
+            padding:1%;
+          } 
+          @media (max-width:990px){
+              #title{
+                text-align: center;
+              }
+              #top_heading{
+                  font-family: "Poppins", sans-serif;
+                  line-height: 1.5;
+                  font-size: 3rem;
+                  font-weight: bolder;
+                  color:black;
+                  padding:5%;
+              }
+              #iphone{
+                position: static;
+                transform: rotate(0);
+                width: 50%;
+                top:0px;
+                left:0%;
+                padding-bottom: 60px;
+                padding-top: 40px;
+              }
+              #top_container button{
+                margin:20px ;
+              }
+          }
+      </style>
+    <title>tindog</title>
+</head>
+<body>
+    <section id="title">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+          <a id="icon" class="navbar-brand" href="#">tindog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="searchbar">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button id="searchbtn" class="btn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="row" id="top_container">
+        <div class="col-lg-6">
+          <h1 id="top_heading">Meet new and interesting dogs nearby.</h1>
+            <button  type="button" class="btn btn-dark btn-lg"><i class="fab fa-apple"></i> Download</button>
+            <button  type="button" class="btn btn-outline-light btn-lg"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img id="iphone"  src="iphone6.png" alt="">
+        </div>
+    </div>
+    </section>
+    <section id="features">
+      <h1 class="primary-h1" carousel-heading>features</h1>
+      <span >
+        <img src="features.png" alt="">
+      </span>
+      <div class="row">
+          <div class="col-lg-4 feature-box" >
+            <i class="icon fas fa-check-circle fa-10x"></i>
+            <h3 class="feature-title">Easy to use.</h3>
+            <p>So easy to use, even your dog could do it.</p>
+          </div>
+          <div class="col-lg-4 feature-box" >
+            <i class="icon fas fa-bullseye fa-10x"></i>
+            <h3 class="feature-title">Elite Clientele</h3>
+            <p>We have all the dogs, the greatest dogs.</p>
+          </div>
+          <div class="col-lg-4 feature-box" >
+            <i class="icon fas fa-heart fa-10x"></i>
+            <h3 class="feature-title">Guaranteed to work.</h3>
+            <p>Find the love of your dog's life or your money back.</p>
+          </div>
+      </div> 
+    </section>
+    <section id="carousel">
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="false">
+        <br>
+        <h1 class="primary-h1" carousel-heading>reviews</h1>
+        <span >
+          <img src="review.png" alt="">
+        </span>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+            <img class="testimonial-image" src="dog-img.jpg" alt="dog-profile">
+            <em>Pebbles, New York</em>
+          </div>
+          <div class="carousel-item">
+            <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+            <img class="testimonial-image" src="lady-img.jpg" alt="lady-profile">
+            <em>Beverly, Illinois</em>
+          </div>
+          <div class="carousel-item">
+            <h2 class="testimonial-text">A dog is the only thing on earth that loves you more than you love yourself.”</h2>
+            <img class="testimonial-image" src="angela.png" alt="lady-profile">
+            <em>UK-london</em>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="clients">
+      <br>
+      <h1 class="primary-h1" carousel-heading>our clients</h1>
+      <span >
+        <img src="client.png" alt="">
+      </span>
+      <div>
+        <div class="clients_icon">
+          <img class="press-logo" src="techcrunch.png" alt="tc-logo">
+        </div>
+        <div class="clients_icon">
+          <img class="press-logo" src="mashable.png" alt="mashable-logo">
+        </div>
+        <div class="clients_icon">
+          <img class="press-logo" src="tnw.png" alt="tnw-logo">
+        </div>
+    </div> 
+    </section>
+    <section id="price">
+      <br>
+      <h1 class="primary-h1" carousel-heading>pricing</h1>
+      <span >
+        <img src="price.png" alt="">
+      </span>
+      <div class="row" style="margin-right: 0;">
+
+        <div class="pricing-column col-lg-4 col-md-4 price-box">
+          <div class="card">
+            <div class="card-header">
+              <h3>Chihuahua</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-column col-lg-4 col-md-4 price-box">
+          <div class="card">
+            <div class="card-header">
+              <h3>Labrador</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+              <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-column col-lg-4 col-md-4 price-box">
+          <div class="card">
+            <div class="card-header">
+              <h3>Mastiff</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download">
+      <br>
+      <div id="download-section">
+        <div class="download-heading">
+          <img src="download.png" alt="" id="download_icon">
+          <h2 style="font-family:Poppins, sans-serif ;font-size:2.5rem ;font-weight:bolder;" class="testimonial-text">Find the True Love of Your Dog's Life Today.</h2>
+        </div>
+        <br>
+        <img src="tindog.png" alt="" id="tindog-icon">
+        <button type="button" class="btn btn-dark btn-lg main-download"><i class="fab fa-apple"></i> Download</button>
+        <button  type="button" class="btn btn-dark btn-lg main-download"><i class="fab fa-google-play"></i> Download</button>
+      </div>
+      <br>
+    </section>
+    <section id="footer">
+        <br>
+        <h1 class="primary-h1" carousel-heading>Get In touch</h1>
+        <span >
+          <i style="color:black;" class="fas fa-id-card-alt fa-3x"></i>
+        </span>
+        <br>
+        <div class="bottom">
+          <i class="social-icon fab fa-facebook-f fa-2x"></i>
+          <i class="social-icon fab fa-twitter fa-2x"></i>
+          <i class="social-icon fab fa-instagram fa-2x"></i>
+          <i class="social-icon fas fa-envelope fa-2x"></i>
+        </div>
+        <p>© 2021 tindog | All rights reserved | Designed by ankit</p>
+        <br>
+    </section>
+</body>
+</html>
